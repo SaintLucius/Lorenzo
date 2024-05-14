@@ -1,0 +1,189 @@
+html { 
+
+   background-color: #1d2026 
+
+}
+
+body {
+
+   margin: 0;
+   padding: 0;
+     
+}
+
+.btnLogin {
+
+   background: linear-gradient(#8b0000, #FFF);
+
+}
+
+.inputbox {
+
+   color: #fff;
+   font-family: Bahnschrift;
+   position: absolute;
+   justify-content: center;
+   align-items: center;
+   bottom: 300px;
+   left: 585px;
+   margin: 10px 0;
+   
+      input {
+         border: 3px solid #000654;
+         padding: 12px 20px;
+         border-radius: 16px;
+         width: 90%;
+         height: 100%;
+         box-shadow: 8px 8px 0px black;
+         margin: 10px 0;
+      }
+
+      button {
+
+         box-shadow: 8px 8px 0px black;
+         border-radius: 8px;
+         padding: 12px 20px;
+         background: linear-gradient(#000654, #000654);
+         color: white;
+         width: 102%;
+         font-family: Bahnschrift;
+         margin: 30px 0px;
+
+      }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+///* GLASS WINDOW ANIMATION *\\\
+
+#footp::after {
+
+content: '|';
+animation: blink 0.7s infinite;
+
+}
+
+@keyframes blink {
+
+0% { opacity: 1; }
+100% { opacity: 0; }
+
+}
+
+
+footer .wave {
+
+position: absolute;
+top: -100px;
+left: 0;
+width: 100%;
+height: 100px;
+background: url(wave.png);
+background-size: 1000px 100px;
+
+}
+
+footer .wave#wave1 {
+
+z-index: 1000;
+opacity: 1;
+bottom: 0;
+animation: animateWave 3s linear infinite;
+
+}
+
+footer .wave#wave2 {
+
+z-index: 999;
+opacity: 0.5;
+bottom: 10px;
+animation: animateWave_02 2s linear infinite;
+
+}
+
+footer .wave#wave3 {
+
+z-index: 1000;
+opacity: 0.2;
+bottom: 15px;
+animation: animateWave 2s linear infinite;
+
+}
+
+footer .wave#wave4 {
+
+z-index: 999;
+opacity: 0.7;
+bottom: 20px;
+animation: animateWave_02 3s linear infinite;
+
+}
+
+
+@keyframes animateWave {
+
+0%
+
+   {
+     background-position-x: 1000px;
+   }
+
+100%
+
+   {
+     background-position-x: 0px;
+   }
+}
+
+@keyframes animateWave_02 {
+
+0%
+
+   {
+     background-position-x: 0px;
+   }
+
+100%
+
+   {
+     background-position-x: 1000px;
+   }
+}
+
+
+
+
+<img src = "C:\Users\acer\Downloads\Art Nouveau.jpg"> </img>
+
+
+///* GLASS WINDOW JS FOOTER *\\\
+
+   <script type = "text/Javascript">
+ 
+
+function typeWriter(footp) {
+    const textArray = footp.innerHTML.split('');
+    footp.innerHTML = '';
+    textArray.forEach((letter, i) =>
+        setTimeout(() => (footp.innerHTML += letter), 95 * i)
+    );
+    setInterval(() => typeWriter(footp), 6000);
+}
+
+typeWriter(footp);
+
+   </script>

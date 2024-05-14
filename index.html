@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Glass Windows</title>
+    <link rel="stylesheet" type="text/css" href="glassWindowLogin.css">
+</head>
+<body>
+    <form onsubmit="logIn(event)">
+        <div class="inputbox">
+            <label for="username">Username</label>
+            <input type="text" id="username" name="username" required>
+            <br>
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" required>
+
+             
+            <button type="submit">LOGIN</button>
+        </div>
+    </form>
+
+    <script>
+        var attempt = 0;
+
+        function logIn(event) {
+            event.preventDefault(); // Prevent form from submitting normally
+
+            alert("Logging in");
+            var userName = document.getElementById("username").value;
+            var passWord = document.getElementById("password").value;
+
+            if (userName == "Lorenzo" && passWord == "Villarico") {
+                window.location.href = "villarico.html";
+                return true;
+            } else {
+                attempt++;
+                if (attempt == 3) {
+                    alert("Cannot login. Attempts exceeded!");
+                    return false;
+                }
+            }
+        }
+    </script>
+</body>
+</html>
